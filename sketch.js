@@ -11,7 +11,7 @@ var bird, slingshot;
 var gameState = "onSling";
 var bg = "sprites/bg1.png";
 
-
+var score=0;
 function preload() {
     getTime();
 }
@@ -49,7 +49,9 @@ function setup(){
 function draw(){
     if(backgroundImg)
         background(backgroundImg);
-    
+        textSize(50)
+        fill ("white")
+    text("score: "+score,500,50)
     
     Engine.update(engine);
     //strokeWeight(4);
